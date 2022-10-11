@@ -1,0 +1,39 @@
+{
+  "name": "jest_node",
+  "version": "1.0.0",
+  "description": "testing using jest for api with node",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wesleyxl/jest_node.git"
+  },
+  "author": "Wesleyxl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wesleyxl/jest_node/issues"
+  },
+  "homepage": "https://github.com/Wesleyxl/jest_node#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.1.2",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "sequelize-cli": "^6.5.1"
+  }
+}
