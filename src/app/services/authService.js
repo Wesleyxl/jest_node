@@ -26,4 +26,25 @@ const loginService = async (email, password) => {
   };
 };
 
-module.exports = { loginService };
+const registerService = async (name, email, password) => {
+  const hashPassword = await bcrypt.hash(password, 10);
+
+  const [user, created] = await User.findOrCreate({
+    where: { email },
+    defaults: { name, email, password: hashPassword },
+  });
+
+  if (!created) {
+    return {
+      success: false,
+      error: "Email already exists",
+    };
+  }
+
+  return {
+    success: true,
+    data: createUserToken(user.id),
+  };
+};
+
+module.exports = { loginService, registerService };
